@@ -1,18 +1,27 @@
 const body = document.querySelector('body')
 
 const hexH1 = document.createElement('h1')
-hexH1.textContent = 'Placeholder'
+hexH1.textContent = 'Start here'
 
 const btn = document.createElement('button')
 btn.textContent = 'Randomize'
 
-
-
-
-
-
 let alphanum = 'abcdef0123456789'
 
+btn.addEventListener('click', () => {
+    body.style.backgroundColor = `#${randomize()}`
+    hexH1.textContent = `${randomize()}`
+    hexH1.style.textTransform = 'full-width'
+})
+
+
+function randomize(){
+    let hexColor = ''
+    for(let i = 0; i < 6; i++){
+        hexColor += alphanum[Math.floor(Math.random() * 16)]
+    }
+    return hexColor
+}
 
 
 
