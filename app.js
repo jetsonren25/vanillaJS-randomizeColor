@@ -1,6 +1,8 @@
 const body = document.querySelector('body')
+
 const hexH1 = document.createElement('h1')
 hexH1.textContent = 'Placeholder'
+
 const btn = document.createElement('button')
 btn.textContent = 'Randomize'
 
